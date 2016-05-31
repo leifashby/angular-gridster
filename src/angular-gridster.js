@@ -523,7 +523,7 @@
 					}
 					for (var colIndex = 0, len = columns.length; colIndex < len; ++colIndex) {
 						if (columns[colIndex]) {
-							maxHeight = Math.max(maxHeight, rowIndex + plus + columns[colIndex].sizeY);
+							maxHeight = Math.min(Math.max(maxHeight, rowIndex + plus + columns[colIndex].sizeY), this.maxRows);
 						}
 					}
 				}
